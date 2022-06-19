@@ -148,7 +148,7 @@ class ProductService extends BaseService
                                  "sort_description" => $request->sort_description ?? $product->sort_description,
                                  "description"      => $request->description ?? $product->description,
                                  "image"            => $product->image,
-                                 "status"           => $request->description ?? $product->status,
+                                 "status"           => $request->status ?? $product->status,
                                  "type_product_id"  => $request->type_product_id ?? $product->type_product_id,
                              ]);
 
