@@ -100,7 +100,7 @@ class TaskService extends BaseService
                            ->when($status !== null, function ($q) use ($status) {
                                $q->where('status', $status);
                            })
-                           ->paginate(10);
+                           ->paginate(20);
     }
 
     #[ArrayShape(["data" => "\Illuminate\Database\Eloquent\Builder[]|\Illuminate\Database\Eloquent\Collection"])]
@@ -270,7 +270,7 @@ class TaskService extends BaseService
                            ->with('bill')
                            ->orderByDesc('tasks.created_at')
                            ->where('customer_id', auth()->id())
-                           ->paginate(10);
+                           ->paginate(20);
     }
 
     public function deleteTask(Request $request): array

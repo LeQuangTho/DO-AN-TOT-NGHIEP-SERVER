@@ -31,6 +31,6 @@ class DiscountService extends BaseService
                            ->where('code', 'LIKE', '%' . $request->discount_code . '%')
                            ->where('id', '<>', 1)
                            ->where('id', '<>', 2)
-                           ->paginate(10);
+                           ->paginate(20);
     }
 }

@@ -83,6 +83,6 @@ class RoleService extends BaseService
 
     public function getAllExceptSuperAdmin(): LengthAwarePaginator
     {
-        return $this->model::query()->whereNotIn('name', ['super-admin'])->paginate(10);
+        return $this->model::query()->whereNotIn('name', ['super-admin'])->paginate(20);
     }
 }

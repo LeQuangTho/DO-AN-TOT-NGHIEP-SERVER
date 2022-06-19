@@ -98,7 +98,7 @@ class PostService extends BaseService
 
         return [
             "data" => [
-                "posts"     => $posts->paginate(10),
+                "posts"     => $posts->paginate(20),
                 "likedPost" => $this->likedViaPosts($posts, auth()->id())
             ]
         ];
@@ -135,7 +135,7 @@ class PostService extends BaseService
 
         return [
             "data" => [
-                "posts" => $posts->paginate(10),
+                "posts" => $posts->paginate(20),
                 "likedPost" => []
             ]
         ];
@@ -169,7 +169,7 @@ class PostService extends BaseService
 
         return [
             "data" => [
-                "posts"     => $posts->paginate(10),
+                "posts"     => $posts->paginate(20),
                 "likedPost" => $this->likedViaPosts($posts, $request->user_id)
             ]
         ];

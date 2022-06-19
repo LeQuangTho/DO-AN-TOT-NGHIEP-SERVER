@@ -60,7 +60,7 @@ class UserService extends BaseService
         return $this->model::query()->with("roles")
                            ->where('name', 'LIKE', '%' . $request->search_string . '%')
                            ->where('id', '<>', auth()->id())
-                           ->paginate(10);
+                           ->paginate(20);
     }
 
     #[ArrayShape(["data" => "bool"])]
